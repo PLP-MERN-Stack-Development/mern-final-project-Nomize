@@ -1,52 +1,322 @@
-# MERN Stack Capstone Project
 
-This assignment focuses on designing, developing, and deploying a comprehensive full-stack MERN application that showcases all the skills you've learned throughout the course.
 
-## Assignment Overview
+# 🧠 **Cognition Quest Lab**
 
-You will:
-1. Plan and design a full-stack MERN application
-2. Develop a robust backend with MongoDB, Express.js, and Node.js
-3. Create an interactive frontend with React.js
-4. Implement testing across the entire application
-5. Deploy the application to production
+### *A Cognitive Training Platform for Mental Clarity, Emotional Awareness & Lifelong Learning*
 
-## Getting Started
+---
 
-1. Accept the GitHub Classroom assignment
-2. Clone the repository to your local machine
-3. Follow the instructions in the `Week8-Assignment.md` file
-4. Plan, develop, and deploy your capstone project
+## 🌟 **Overview**
 
-## Files Included
+**Cognition Quest Lab** is an interactive learning experience designed to help users strengthen cognitive skills through practical, psychology-backed exercises.
 
-- `Week8-Assignment.md`: Detailed assignment instructions
+The platform blends cognitive science, emotional intelligence, and modern frontend engineering to support healthier thinking, better focus, and personal growth.
 
-## Requirements
+This project was built as the  **final capstone submission for the Power Learn Project Africa Academy** , demonstrating full-stack engineering, UI/UX execution, Supabase backend integration, testing, and CI/CD deployment with Vercel.
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git and GitHub account
-- Accounts on deployment platforms (Render/Vercel/Netlify/etc.)
+---
 
-## Project Ideas
+## 🚀 **Live Demo**
 
-The `Week8-Assignment.md` file includes several project ideas, but you're encouraged to develop your own idea that demonstrates your skills and interests.
+**Frontend (Vercel):**
 
-## Submission
+👉 [https://cognition-quest-lab.vercel.app/](https://cognition-quest-lab.vercel.app/)
 
-Your project will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+**Supabase Edge Functions:**
 
-1. Commit and push your code regularly
-2. Include comprehensive documentation
-3. Deploy your application and add the live URL to your README.md
-4. Create a video demonstration and include the link in your README.md
+* Insights Generator →
 
-## Resources
+  `https://qhbroauusanobomvcehr.supabase.co/functions/v1/generate-insights`
+* Paystack Webhook →
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [GitHub Classroom Guide](https://docs.github.com/en/education/manage-coursework-with-github-classroom) 
+  `https://qhbroauusanobomvcehr.supabase.co/functions/v1/paystack-webhook`
+
+---
+
+## 🎥 **Video Demonstration**
+
+🎬 **5–10 min Demo Video:**
+
+[https://drive.google.com/file/d/13H35az4xTXwOed2g1PoT9f-GHYpb4KHp/view?usp=drive_link](https://drive.google.com/file/d/13H35az4xTXwOed2g1PoT9f-GHYpb4KHp/view?usp=drive_link)
+
+---
+
+## 📘 **Pitch Deck**
+
+📄 [https://gamma.app/docs/g9wd2smiv33mpmn](https://gamma.app/docs/g9wd2smiv33mpmn)
+
+---
+
+## 🧩 **Key Features**
+
+* 🧠 **Cognitive Skill Exercises**
+
+  Memory, focus, reasoning and emotional insight tools.
+* 📚 **Micro-learning Lessons**
+
+  Clear explanations of psychology concepts embedded into the experience.
+* 💡 **Guided Mental Clarity Tools**
+
+  Reflection prompts, self-assessment, and cognitive reframing.
+* ✨ **Modern UI**
+
+  Beautiful components built with Tailwind + shadcn-ui.
+* 🔐 **Supabase Authentication**
+
+  Secure login with persistent sessions.
+* ⚙️ **Supabase Edge Functions**
+
+  Used for insights generation and Paystack webhook handling.
+* 💳 **Premium Access Flow (Paystack — Test Mode)**
+
+  A simulated payment experience for unlocking premium tools.
+
+---
+
+## 🛠️ **Tech Stack**
+
+### **Frontend**
+
+* React 18
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn-ui
+* React Router
+* React Query
+* Sonner notifications
+
+### **Backend**
+
+* Supabase (Postgres + Auth)
+* Supabase Edge Functions
+* Paystack test payment
+
+### **Deployment**
+
+* Vercel (Frontend)
+* Supabase Cloud (Backend)
+
+### **Testing**
+
+* Vitest (frontend)
+* Node Test Runner (backend)
+
+### **CI/CD**
+
+* GitHub Actions
+  * `frontend-ci.yml`
+  * `frontend-cd.yml`
+  * `supabase-ci.yml`
+
+---
+
+## 📂 **Project Structure**
+
+```
+cognition-quest-lab/
+│
+├── src/
+│   ├── components/         # UI Components
+│   ├── pages/              # Screens
+│   ├── contexts/           # Theme & global contexts
+│   ├── lib/                # Utilities
+│   └── App.tsx
+│
+├── supabase/
+│   ├── functions/          # Edge Functions
+│   └── migrations/
+│
+├── docs/
+│   ├── api.md              # API Documentation
+│   └── architecture.md     # Technical Architecture
+│
+├── monitoring/
+│   └── monitoring-setup.md
+│
+├── screenshots/
+│   # → contains all project screenshots
+│
+├── .github/workflows/
+│   ├── frontend-ci.yml
+│   ├── frontend-cd.yml
+│   └── supabase-ci.yml
+│
+├── .env.example
+├── package.json
+├── vite.config.ts
+├── vitest.config.ts
+└── README.md
+```
+
+---
+
+## ⚙️ **Setup Instructions**
+
+### **1. Clone the Repository**
+
+```bash
+git clone <your-github-classroom-week8-repo>
+cd cognition-quest-lab
+```
+
+### **2. Install Dependencies**
+
+```bash
+npm install
+```
+
+### **3. Configure Environment Variables**
+
+Create a `.env` file:
+
+```
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_key
+
+VITE_PAYSTACK_PUBLIC_KEY=your_paystack_test_key
+
+VITE_FUNCTION_GENERATE_INSIGHTS=your_function_url
+VITE_FUNCTION_PAYSTACK_WEBHOOK=your_webhook_url
+```
+
+Or use **Vercel → Project Settings → Environment Variables** for production.
+
+### **4. Run Locally**
+
+```bash
+npm run dev
+```
+
+Visit:
+
+👉 [http://localhost:](http://localhost:5173/)8080/
+
+---
+
+## 🧪 **Testing**
+
+### **Frontend (Vitest)**
+
+```bash
+npm test
+```
+
+Uses:
+
+* Vitest
+* React Testing Library
+* jsdom environment
+* Mocked localStorage + matchMedia
+
+### **Backend (Node Test Runner)**
+
+```bash
+cd supabase/functions
+npm test
+```
+
+Simple sanity tests used to validate CI pipeline + function integrity.
+
+---
+
+## 🔄 **CI/CD Workflows**
+
+GitHub Actions automates:
+
+### ✔ `frontend-ci.yml`
+
+* Install dependencies
+* Run Vitest
+* Build React app
+
+### ✔ `frontend-cd.yml`
+
+* Deploy to Vercel on successful build
+
+### ✔ `supabase-ci.yml`
+
+* Run backend tests
+* Validate edge function folders
+
+Screenshots of successful runs are inside `/screenshots`.
+
+---
+
+## 🖼️ **Screenshots**
+
+Located in:
+
+```
+screenshots/
+```
+
+Includes:
+
+* Homepage
+* Tools screen
+* Insights generator
+* Payment flow
+* Supabase dashboard
+* GitHub Actions CI passing
+
+---
+
+## 🧠 **Architecture Summary**
+
+Full breakdown in:
+
+📄 `docs/architecture.md`
+
+**High-level flow:**
+
+1. User authenticates via Supabase
+2. Access exercises & tools from React SPA
+3. Insights tool calls Supabase Edge Function
+4. Payments processed through Paystack (test mode)
+5. Data stored in Postgres
+6. Vercel deploys automatically on push
+
+---
+
+## 📘 **API Documentation**
+
+See:
+
+📄 `docs/api.md`
+
+Covers endpoints, sample requests, and function behavior.
+
+---
+
+## 🔮 **Future Enhancements**
+
+* AI-generated insights
+* Gamification (badges, streaks, leaderboard)
+* Community hub
+* Full Paystack live integration
+* Multilingual support
+* Mobile app version (React Native)
+* Analytics dashboard for admin
+
+---
+
+## 👩‍💻 **Author**
+
+**Uche Nneoma**
+
+PLP Academy — Final Capstone Project
+
+GitHub: [https://github.com/Nomize](https://github.com/Nomize)
+
+Live App: [https://cognition-quest-lab.vercel.app/](https://cognition-quest-lab.vercel.app/)
+
+Video Demo: *(see link above)*
+
+---
+
+## 🎉 **Thank You**
+
+This project embodies my passion for psychology, mental health, and building meaningful digital tools.
+
+Thank you for reviewing this work — I hope Cognition Quest Lab inspires learning, clarity, and growth.
