@@ -1,0 +1,12 @@
+name: Frontend CD
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  note:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Vercel auto-deploy note
+        run: echo "Vercel automatically deploys this project on every push to main."

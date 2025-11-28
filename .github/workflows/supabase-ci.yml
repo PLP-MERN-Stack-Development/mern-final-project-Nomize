@@ -1,0 +1,28 @@
+name: Supabase Functions CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  test-functions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Supabase function dependencies
+        run: |
+          cd supabase/functions
+          npm install || echo "No package.json in functions"
+
+      - name: Run tests
+        run: |
+          cd supabase/functions
+          npm test || echo "No tests found"

@@ -1,0 +1,12 @@
+{
+  "name": "supabase-functions",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}
